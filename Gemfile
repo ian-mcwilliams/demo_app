@@ -1,44 +1,53 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
+#ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '3.2.3'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.8'
 
 group :development do
-gem 'sqlite3', '1.3.5'
+	gem 'sqlite3', '1.3.8'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '3.2.4'
-  gem 'coffee-rails', '3.2.2'
+# Use SCSS for stylesheets
+gem 'sass-rails', '4.0.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '2.1.1'
 
-  gem 'uglifier', '1.2.3'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '4.0.1'
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails', '3.0.4'
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks', '1.1.1'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '1.0.2'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', '0.3.20', require: false
 end
-
-gem 'jquery-rails', '~>2.0.0'
 
 group :production do
-
-	gem 'pg', '0.12.2'
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+# Use debugger
+# gem 'debugger', group: [:development, :test]
